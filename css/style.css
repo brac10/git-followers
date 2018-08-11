@@ -1,0 +1,318 @@
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    background: -webkit-radial-gradient(1290px at 50%, #363636 0, #000 100%) #2c2c2c;
+    background: radial-gradient(1290px at 50%, #363636 0, #000 100%) #2c2c2c;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 30px 0 0;
+}
+
+header h4 {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 10px 0 30px;
+}
+
+#git-logo {
+    height: 42px;
+    filter: brightness(100);
+    vertical-align: bottom;
+}
+
+section#avatar-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.follower {
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 8px;
+}
+
+.follower:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.follower h4 {
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 10px #333;
+    -webkit-text-stroke: 0.5px #333;
+}
+
+/* Search */
+
+input[type=search] {
+    width: 200px;
+    border: 1px solid #eee;
+    padding: 11px 10px;
+    font-size: 0.9em;
+    -webkit-appearance: none;
+}
+
+.searchbox button {
+    display: block;
+    height: 40px;
+    width: 200px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    clear: both;
+    cursor: pointer;
+    background-color: #507FA3;
+    border: 1px solid #507FA3;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+
+.searchbox button:hover {
+    background-color: #fff;
+    color: #507FA3;
+}
+
+/* load more button */
+
+.load-more {
+    background-color: #e1e1e1;
+    color: #444;
+    display: block;
+    height: 3em;
+    line-height: 3em;
+    margin: 2em auto;
+    overflow: hidden;
+    padding: 0 3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all .2s ease, background-color .01s ease, color .01s ease;
+    width: 150px;
+    cursor: pointer;
+}
+
+.load-more--loading {
+    animation: rotate 1.5s linear infinite;
+    animation-delay: .2s;
+    background-color: transparent;
+    border: .3em solid #e1e1e1;
+    border-radius: 1.5em;
+    border-top-color: #444;
+    box-sizing: border-box;
+    height: 3em;
+    color: transparent;
+    padding: 0;
+    pointer-events: none;
+    width: 3em;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+/* AutoComplete */
+
+.ui-menu-item {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #555;
+}
+
+.ui-menu-item>a.ui-corner-all {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.ui-state-active, .ui-state-hover, .ui-menu-item:hover {
+    color: #fff;
+    background-color: rgb(56, 56, 56);
+}
+
+/* load-wrap */
+
+.load-wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000094;
+    z-index: 10;
+}
+
+.load-wrap>div {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.load-wrap>div>div {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #507FA3;
+    top: 10px;
+    left: 10px;
+    transform-origin: 20px 20px;
+    border-radius: 8px;
+    animation: spin-a 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.load-wrap>div>.c2 {
+    top: 10px;
+    left: auto;
+    right: 10px;
+    transform-origin: -4px 20px;
+    animation: spin-b 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.load-wrap>div>.c3 {
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+    transform-origin: -4px -4px;
+    animation: spin-c 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.load-wrap>div>.c4 {
+    top: auto;
+    bottom: 10px;
+    transform-origin: 20px -4px;
+    animation: spin-d 2s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.load-wrap>span {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: 30px;
+    color: #507FA3;
+    font-size: 12px;
+    text-align: center;
+}
+
+@keyframes spin-a {
+    0% {
+        transform: rotate(90deg);
+    }
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-b {
+    0% {
+        transform: rotate(90deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-c {
+    0% {
+        transform: rotate(90deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-d {
+    0% {
+        transform: rotate(90deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+        line-height: 2.5em;
+    }
+    #git-logo {
+        height: 110px;
+        vertical-align: bottom;
+    }
+    .follower {
+        width: 100px;
+        height: 100px;
+    }
+    .follower h4 {
+        font-size: 12px;
+    }
+}
