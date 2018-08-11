@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="load-wrap" style="display:none;">
+        <div>
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+            <div class="c4"></div>
+        </div>
+        <span>loading</span>
+    </div>
+    <header>
+        <form class="searchbox">
+            <h1>My <img src="./img/github-logo.png" id="git-logo" alt="GitHub"> Followers</h1>
+            <h4>Enter your username to reveal the <b>true face</b> of your followers!</h4>
+            <input type="search" placeholder="username" id="search">
+            <button>Show Me the followers!</button>
+        </form>
+    </header>
+    <h4 id="follower-count"></h4>
+    <h5 id="follower-comment"></h5>
+    <section id="avatar-display">
+    </section>
+    <a class="load-more">Load more</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/modules/github.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+
+</body>
+
+</html>
