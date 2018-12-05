@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # git-followers
 
 ## The Task: Github user's followers search
@@ -21,3 +22,6 @@ linking to external JS/CSS.
 * Libraries - jQuery, jQuery UI.
 * Mobile first approach.
 * Consist with the JavaScript Module Pattern.
+=======
+# git-followers
+>>>>>>> 56bc151d3bef438c88753582d05ee83ce7957a0e
