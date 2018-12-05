@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # git-followers
 
-## The Task: Github user's followers search
+##  Github user's followers search
 This assignment consists of creating a service that allows for a user to search for a GitHub user's followers, display the followers avatar and total number of followers.
 Also, I had to handle users with a lot of followers by adding a "Load More" button.
 
@@ -24,4 +23,3 @@ linking to external JS/CSS.
 * Consist with the JavaScript Module Pattern.
 =======
 # git-followers
->>>>>>> 56bc151d3bef438c88753582d05ee83ce7957a0e
